@@ -40,6 +40,9 @@ public class I420ToBitmapUtils {
     private int imageCount = 1;
     private long preTime = System.currentTimeMillis();
 
+    /**
+     * @param cxt 上下文对象
+     */
     public I420ToBitmapUtils(Context cxt) {
         rs = RenderScript.create(cxt);
         yuvToRgbIntrinsic = ScriptIntrinsicYuvToRGB.create(rs, Element.U8_4(rs));
